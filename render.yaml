@@ -1,0 +1,30 @@
+# Exported from Render on 2025-06-15T13:13:45Z
+services:
+- type: web
+  name: backend-neha-enterprises
+  runtime: node
+  repo: https://github.com/dharmendra-kumar53/backend-neha-enterprises
+  plan: free
+  envVars:
+  - key: RAZORPAY_KEY_SECRET
+    sync: false
+  - key: RAZORPAY_KEY_ID
+    sync: false
+  - key: CLOUDINARY_SECRET_KEY
+    sync: false
+  - key: CLOUDINARY_API_KEY
+    sync: false
+  - key: CLOUDINARY_NAME
+    sync: false
+  - key: JWT_SECRET
+    sync: false
+  - key: MONGODB_URI
+    sync: false
+  - key: PORT
+    sync: false
+  region: oregon
+  buildCommand: npm install
+  startCommand: node index.js
+  autoDeployTrigger: commit
+  rootDir: backend
+version: "1"
